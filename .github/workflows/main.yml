@@ -14,14 +14,12 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'  # Specify the Python version you want to use
+          python-version: '3.x' 
 
-      # Step 4: Run tests
       - name: Run tests
         run: |
-          python -m unittest discover -s test_scientific_calculator.py
+          python test_scientific_calculator.py
 
